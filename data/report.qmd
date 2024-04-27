@@ -3,7 +3,7 @@ title: "STAT80B Midway Report"
 subtitle: "Inspired by Tufte Handout, Using Quarto"
 date: "`r Sys.Date()`"
 format:
-    md: default
+    pdf: default
     html: 
       self-contained: true
       grid: 
@@ -18,7 +18,7 @@ bibliography: skeleton.bib
 # Introduction
 
 This document outlines our project for STAT80B (Data Visualization). Our project will analyze homelessness data in California and the US and create visualizations based on the provided dataset.
-Our project github repository can be found here.
+Our project github repository can be found here [ADD LINK].
 
 # Our questions:
 - What is the rate of increase in homelessness in Santa Cruz County from 2008-2016?
@@ -33,24 +33,29 @@ https://github.com/CalMatters/housing-viz/tree/4b49c7798ae82515e39bd7326285cc15f
 - We downloaded the "data" folder from their repo to our git repo!
 
 # Plotting Methodology
-We used R to plot the CSV files from the Calmatters Housing dataset
+We used R to plot the CSV files from the Calmatters Housing dataset. 
 
 ## Plotting code
-
 [Include excerpt of code]
 
-# Visualization we want to reproduce
-- [Insert example]
+# Critical Review of a visualization we want to reproduce
+  https://dynomight.net/homeless-crisis/ 
+  This visualization is a line graph showing the homeless population of the United States from 2011-2020 split into four different categories: sheltered non-chronic, unsheltered non-chronic, unsheltered chronic, and sheltered chronic. Each category is represented by a separate line on the graph, with the x-axis displaying each year and the y-axis showing the number of people experiencing homelessness in the thousands. 
+	The data for this graph comes from the US Department of Housing and Urban Development and many local government agencies within the US.
+	This visualization provides an overview of the homeless population from 2011-2020, focusing on the trends within the homeless population. By splitting the population into categories, the graph displays a more in-depth look into how the homeless population as a whole has changed.
+
 
 # Visualizations we've created:
-Plot 1: Explanation
+Plot 1: 
+[Link]
 
-Plot 2: Explanation
+Plot 2:
+[Link]
 
 # Challenges we've encountered
 - Learning R is complicated, but rewarding!
 - How will we make our visualizations more interesting using ggplot? Will we want to use additional software to create new plots?
-- Aggregating the data and teaching ourselves how to create different types of plots may be a challenge
+- Aggregating the data and teaching ourselves how to create different types of plots may be a challenge.
 
 # What do we expect to achieve in the project?
 - Understand trends of homelessness across our county, state, and country
@@ -63,5 +68,6 @@ Plot 2: Explanation
 # Resources used:
 - https://www.youtube.com/watch?v=yZ0bV2Afkjc&t=313s
 - https://youtu.be/1pXSCTU_Afw?si=UwCBdjW141CUIIXW 
-
+- https://quarto.org/docs/get-started/
+- https://ggplot2-book.org/getting-started.html
 
