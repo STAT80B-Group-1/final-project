@@ -1,0 +1,67 @@
+---
+title: "STAT80B Midway Report"
+subtitle: "Inspired by Tufte Handout, Using Quarto"
+date: "`r Sys.Date()`"
+format:
+    md: default
+    html: 
+      self-contained: true
+      grid: 
+        margin-width: 350px
+execute: 
+  echo: fenced
+reference-location: margin
+citation-location: margin
+bibliography: skeleton.bib
+---
+
+# Introduction
+
+This document outlines our project for STAT80B (Data Visualization). Our project will analyze homelessness data in California and the US and create visualizations based on the provided dataset.
+Our project github repository can be found here.
+
+# Our questions:
+- What is the rate of increase in homelessness in Santa Cruz County from 2008-2016?
+- What California county had the largest increase in homelessness from 2008-2016?
+- What state had the largest increase in homelessness from 2007-2017?
+- And more...
+
+# Dataset:
+- Dataset describes homelessness numbers in California counties from 2007-2017
+- Data is from CalMatters Housing git repo here:
+https://github.com/CalMatters/housing-viz/tree/4b49c7798ae82515e39bd7326285cc15fa8c6bd7.
+- We downloaded the "data" folder from their repo to our git repo!
+
+# Plotting Methodology
+We used R to plot the CSV files from the Calmatters Housing dataset
+
+## Plotting code
+
+[Include excerpt of code]
+
+# Visualization we want to reproduce
+- [Insert example]
+
+# Visualizations we've created:
+Plot 1: Explanation
+
+Plot 2: Explanation
+
+# Challenges we've encountered
+- Learning R is complicated, but rewarding!
+- How will we make our visualizations more interesting using ggplot? Will we want to use additional software to create new plots?
+- Aggregating the data and teaching ourselves how to create different types of plots may be a challenge
+
+# What do we expect to achieve in the project?
+- Understand trends of homelessness across our county, state, and country
+- Using these trends to identify where we need change the most
+- What events might have effected a DECREASE in homelessness, and what might we be able to take away from that decrease? 
+- How can we continue that decrease in unsheltered homelessness in Santa Cruz County?
+- The lesson at the end of our presentation: how can we improve housing affordability in our county? How can we end the housing and homelessness crisis?
+
+
+# Resources used:
+- https://www.youtube.com/watch?v=yZ0bV2Afkjc&t=313s
+- https://youtu.be/1pXSCTU_Afw?si=UwCBdjW141CUIIXW 
+
+
