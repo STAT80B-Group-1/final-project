@@ -2,7 +2,7 @@ library(ggplot2)
 library(dplyr)
 library(tidyverse)
 # Load the dataset
-homelessness_data <- read.csv('C:/Users/karee/Documents/GitHub/final-project/data/homelessness_totals.csv')
+homelessness_data <- read.csv('C:/Users/karee/OneDrive/Documents/GitHub/final-project/data/homelessness_totals.csv')
 
 # View the initial data structure
 View(homelessness_data)
