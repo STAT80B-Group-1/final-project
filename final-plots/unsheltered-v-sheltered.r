@@ -1,7 +1,10 @@
 library(tidyverse)
-
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(ggrepel)
 # data set of homelessness ct in CA
-data <- read.csv('C:/Users/Lola/Desktop/STAT80B_Project/final-project/data/homelessness_edited.csv')
+data <- read.csv('C:/Users/karee/OneDrive/Documents/GitHub/final-project/data/homelessness_totals.csv')
 
 # Filter the data for Santa Cruz county in California
 santa_cruz_data <- data %>%
@@ -22,6 +25,10 @@ sheltered_data <- santa_cruz_data %>%
 # combine the sheltered and unsheltered data
 combined_data <- bind_rows(unsheltered_data, sheltered_data)
 
+annotation <- data.frame(
+  x = 2014, y = 2895, 
+  label = "In 2014, \n the Departnment of HUD \n changed their\n data collection \n standards"
+)
 # Plot the combined data
 ggplot(combined_data, aes(x = as.integer(sub(".*_(\\d+)", "\\1", Year)), y = Count, color = Type)) +
   geom_line(size = 1.5) +  # Adjust line thickness
@@ -30,7 +37,14 @@ ggplot(combined_data, aes(x = as.integer(sub(".*_(\\d+)", "\\1", Year)), y = Cou
     y = "Homeless Count",
     title = "Sheltered vs Unsheltered Homelessness in Santa Cruz County (2007-2017)",
     color = "Type"
-  ) +
+  ) + 
+  geom_label_repel(data=annotation, aes( x=x, y=y, label=label, nudge_x = 2017, nudge_y = 4000),                 , 
+                       color="darkblue", 
+                       size=6 , angle=0, fontface="bold" ) +
+  geom_point(aes(x=2014,y=2895),         
+             color='darkblue',
+             size=3) +
+  scale_color_manual(values = c("Sheltered" = "red", "Unsheltered" = "blue")) +
   theme_minimal() +
   theme(
     plot.title = element_text(hjust = 0.5, size = 14, face = "bold"),

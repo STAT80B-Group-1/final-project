@@ -4,7 +4,7 @@ library(tidyr)
 library(ggplot2)
 library(ggrepel)
 # Read the HPI data from the CSV file
-data_hpi <- read.csv('C:/Users/Lola/Downloads/ATNHPIUS06087A.csv', header = TRUE)
+'C:/Users/Lola/Downloads/ATNHPIUS06087A.csv'
 
 # Rename the column ATNHPIUS06087A to HPI
 data_hpi <- data_hpi %>%
@@ -22,7 +22,7 @@ data_hpi_filtered$Year <- as.integer(format(data_hpi_filtered$DATE, "%Y"))
 data_hpi_filtered <- data_hpi_filtered %>% select(Year, HPI)
 
 # Read the homelessness data from the CSV file
-data_homeless <- read.csv('C:/Users/Lola/Desktop/STAT80B_Project/final-project/data/homelessness_edited.csv')
+data_homeless <- read.csv('C:/Users/Lola/Downloads/ATNHPIUS06087A.csv')
 
 # Filter the data for Santa Cruz county in California
 santa_cruz_data <- data_homeless %>%
@@ -71,6 +71,11 @@ ggplot(combined_data, aes(x = Year)) +
              size=3) +
   theme_minimal() +
   theme(
+    plot.title = element_text(hjust = 0.5, size = 14, face = "bold"),
+    axis.title = element_text(size = 12),
+    axis.text = element_text(size = 10),
+    legend.title = element_text(size = 12),
+    legend.text = element_text(size = 10),
     axis.title.y.right = element_text(color = "red"),
     axis.text.y.right = element_text(color = "red")
   ) + scale_x_continuous(breaks = c(2007, 2010, 2012, 2015, 2017), labels = c(2007, 2010, 2012, 2015, 2017))
